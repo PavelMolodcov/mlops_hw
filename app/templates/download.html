@@ -1,0 +1,5 @@
+{% for filename in files %}
+<a href="{{ request.url_for('download_file', filename=filename) }}">{{ filename }}</a><br />
+{% endfor %}
+<a href="{{ request.url_for('download_file', filename=json_file) }}">Download JSON file</a><br />
+<a href="{{ request.url_for('download_file', filename=jpg_file) }}">Download JPG file</a><br />
